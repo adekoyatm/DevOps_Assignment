@@ -28,7 +28,8 @@ jobs:
         run: |
           docker build -t ${{ secrets.DOCKERHUB_USERNAME }}/${IMAGE_NAME}:${IMAGE_TAG} .
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/${IMAGE_NAME}:${IMAGE_TAG}
-        outputs:
+          
+    outputs:
           image_name: ${{ secrets.DOCKERHUB_USERNAME }}/${IMAGE_NAME}
           image_tag: ${{ github.sha }}
 
