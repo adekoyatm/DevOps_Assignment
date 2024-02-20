@@ -30,8 +30,8 @@ jobs:
           docker push ${{ secrets.DOCKERHUB_USERNAME }}/${IMAGE_NAME}:${IMAGE_TAG}
           
     outputs:
-          image_name: ${{ secrets.DOCKERHUB_USERNAME }}/${IMAGE_NAME}
-          image_tag: ${{ github.sha }}
+          image_name: ${{ steps.build-image.outputs.image_name }}
+          image_tag: ${{ steps.build-image.outputs.image_tag }}
 
   deploy:
     needs: build
