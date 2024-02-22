@@ -38,8 +38,10 @@ pm2 list
 echo "Displaying logs for the Flask application..."
 pm2 logs flask-app
 
-echo "Commands to stop or restart the application:"
-echo "pm2 stop flask-app"
-echo "pm2 restart flask-app"
+
+#Commands to stop application, type:
+#"pm2 stop flask-app"
+#To restart the application, type:
+#"pm2 restart flask-app"
 
 
