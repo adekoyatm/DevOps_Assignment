@@ -1,5 +1,14 @@
 #!/bin/bash
 
+#Running the Script: 
+#Navigate to the directory containing script & type:  
+#"./start_flask_app.sh"
+#if permission is denied, type:
+#"chmod +x start_flask_app.sh"
+#then type:
+#"./start_flask_app.sh"
+
+
 # Check if PM2 is installed
 if ! command -v pm2 &> /dev/null
 then
@@ -34,10 +43,3 @@ echo "pm2 stop flask-app"
 echo "pm2 restart flask-app"
 
 
-#Running the Script: 
-#Navigate to the directory containing script & type:  
-#"./start_flask_app.sh"
-#if permission is denied, type:
-#"chmod +x start_flask_app.sh"
-#then type:
-#"./start_flask_app.sh"
