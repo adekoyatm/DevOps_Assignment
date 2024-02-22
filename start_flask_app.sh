@@ -32,3 +32,12 @@ pm2 logs flask-app
 echo "Commands to stop or restart the application:"
 echo "pm2 stop flask-app"
 echo "pm2 restart flask-app"
+
+
+#Running the Script: 
+#Navigate to the directory containing script & type:  
+#"./start_flask_app.sh"
+#if permission is denied, type:
+#"chmod +x start_flask_app.sh"
+#then type:
+#"./start_flask_app.sh"
