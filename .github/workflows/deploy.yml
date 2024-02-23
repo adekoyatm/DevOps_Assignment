@@ -52,8 +52,8 @@ jobs:
         env: 
             INSTANCE_IP: ${{secrets.INSTANCE_IP}}
             run: |
-                ssh -o
-                StrictHostKeyChecking=no -i ~/.ssh/id_rsa $INSTANCE_IP
+                #ssh -o
+                #StrictHostKeyChecking=no -i ~/.ssh/id_rsa $INSTANCE_IP
                 ssh -o StrictHostKeyChecking=no -i ~/.ssh/id_rsa $INSTANCE_IP 'sudo docker pull $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG && sudo docker stop my-flask-app || true && sudo docker rm my-flask-app || true && sudo docker run -d --name my-flask-app -p 5000:5000 $DOCKER_USERNAME/$IMAGE_NAME:$IMAGE_TAG'
                 
       #           # Check if Docker is installed, install if not
